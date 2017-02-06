@@ -1,7 +1,7 @@
 #widowx_arm_controller
 
-The WidowX Arm Controller is based on [arbotix_python](http://wiki.ros.org/arbotix_python) package
+The WidowX Turret Controller is based on [arbotix_python](http://wiki.ros.org/arbotix_python) package
 
 ##Startup
 
-`$ roslaunch widowx_arm_controller widowx_arm_controller.launch`
+`$ roslaunch widowx_turret_controller widowx_turret_controller.launch`
