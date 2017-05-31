@@ -211,19 +211,19 @@
          <axis xyz="0 1 0" />
          <limit lower="-1.745" upper="1.745" effort="0" velocity="1.571" />
       </joint>
-      <joint name="${prefix}joint_5" type="revolute">
+      <joint name="${prefix}servo_pan_joint" type="revolute">
          <origin xyz="0 0 0" rpy="0 0 0" />
          <parent link="${prefix}side_link" />
          <child link="${prefix}servo_tilt_link" />
          <axis xyz="0 0 1" />
-         <limit lower="-2.617" upper="2.617" effort="0" velocity="1.571" />
+         <limit lower="-${M_PI}" upper="${M_PI}" effort="0" velocity="1.571" />
       </joint>
-      <joint name="${prefix}joint_6" type="fixed">
+      <joint name="${prefix}servo_tilt_joint" type="revolute">
          <origin xyz = "0 0 ${M_SCALE*50.25}" rpy="0 0 0" />
          <parent link="${prefix}servo_tilt_link" />
          <child link="${prefix}hinge_link" />
-         <axis xyz="0 0 1" />
-         <limit lower="-0.31" upper="0.1" effort="0" velocity="0.5" />
+         <axis xyz="1 0 0" />
+         <limit lower="-${M_PI/2}" upper="${M_PI/2}" effort="0" velocity="0.5" />
       </joint>
       <joint name="${prefix}joint_7" type="fixed">
          <origin xyz = "0 0 ${M_SCALE*29.8}" rpy="0 0 0" />
